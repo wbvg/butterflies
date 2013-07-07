@@ -1,0 +1,20 @@
+<% @butterflies.each do |bug| %>
+<section>
+  <%= bug['name'] %>
+  <%= bug['family'] %>
+  <img src="<%= bug['photo'] %>">
+  <a href="/butterflies/<%= bug['id'] %>/edit">Edit</a>
+  <form method='post' action='/butterflies/<%= bug['id'] %>/delete'>
+    <button>delete</button>
+  </form>
+</section>
+<% end %>
+
+
+
+<form method='post' action='<%= @butterfly.nil? ? '/create' : "/butterflies/#{@butterfly['id']}" %>'>
+  <input name='name' placeholder='Name' autofocus value="<%= @butterfly['name'] if @butterfly %>">
+  <input name='photo' placeholder='Photo'  value="<%= @butterfly['photo'] if @butterfly %>">
+  <input name='family' placeholder='Family'  value="<%= @butterfly['family'] if @butterfly %>">
+  <button>butterfly me!</button>
+</form>

@@ -1,0 +1,23 @@
+  <h1>These are your butterflies:</h1>
+
+
+  <% @butterflies.each do |row| %>
+<section>
+      <%=row['name'] %>
+      <%=row['family'] %>
+      <img src ='<%=row['photo'] %>'>
+
+
+<a href="/butterflies/<%= row['id'] %>/edit">Edit</a>
+
+
+      <form method='post' action='/butterflies/<%= row['id'] %>/delete'>
+        <button>Delete</button>
+      </form>
+</section>
+
+ </div>
+     <hr>
+      <% end %>
+
+

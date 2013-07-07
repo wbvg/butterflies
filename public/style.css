@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  float: left;
+  width: 200px;
+  margin: 25px;
+  border:  1px dashed green;
+}
+
+
+div.style3{
+
+  display: block;
+  width: 200px;
+  height:200px;
+}
+
+img {
+
+  width:190px;
+  height: auto;
+}

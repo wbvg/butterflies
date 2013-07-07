@@ -1,0 +1,7 @@
+<form method='post' action='<%= @butterfly.nil? ? '/create' : "/butterflies/#{@butterfly['id']}" %>'>
+
+  <input name='name' placeholder="name" autofocus value="<%= @butterfly['name'] if @butterfly %>">
+  <input name='photo' placeholder="photo" value="<%= @butterfly['photo'] if @butterfly %>">
+  <input name='family' placeholder="family" value="<%= @butterfly['family'] if @butterfly %>">
+  <button>Butterfly me!</button>
+</form>
